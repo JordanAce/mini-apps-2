@@ -1,11 +1,14 @@
 import React from 'react'
-import History from './History.jsx'
+import HistoryFetcher from './HistoryFetcher.jsx'
 
 class SearchForm extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: '',
+      showHistory: false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -18,10 +21,11 @@ class SearchForm extends React.Component {
 
   handleSubmit(event) {
     console.log(`Searching for ${this.state.value}`)
+    this.setState({
+      showHistory: true
+    })
     event.preventDefault();
-    return (
-      <History text = {this.state.value} />
-    )
+
   }
 
 
@@ -39,6 +43,7 @@ class SearchForm extends React.Component {
           </label>
           <input type="submit" value="Submit"></input>
         </form>
+      {this.state.showHistory ? <HistoryFetcher text = {this.state.value} /> : null}
     </div>
     )
   }
