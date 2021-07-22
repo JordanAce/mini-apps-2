@@ -25,15 +25,10 @@ class SearchForm extends React.Component {
       showHistory: true
     })
     event.preventDefault();
-
   }
 
 
-
-
-
   render() {
-
     return (
       <div>
         <form onSubmit = {this.handleSubmit}>

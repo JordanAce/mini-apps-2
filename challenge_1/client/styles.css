@@ -1,0 +1,13 @@
+
+.pagination li {
+  display: inline-block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+[class$="disabled"] {
+  visibility: hidden;
+}
+.active {
+  color: black;
+  font-weight: bold;
+}

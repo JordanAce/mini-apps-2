@@ -2,7 +2,7 @@
 
 module.exports = {
     "mode": "development",
-    "entry": "./client",
+    "entry": "./client/index.jsx",
     "output": {
         "path": __dirname + '/public',
         "filename": "bundle.js"

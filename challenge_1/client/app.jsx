@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchForm from './SearchForm.jsx'
+import './styles.css'
 
 class App extends React.Component {
 
