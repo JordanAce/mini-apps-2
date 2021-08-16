@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './client/app.jsx',
   mode: 'development',
+  watch: true,
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public')
