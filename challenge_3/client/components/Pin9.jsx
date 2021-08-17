@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pin9 = () => {
   return (
-    <div style={{display:"inline-block"}}><span>PIN 9</span></div>
+    <div style={{display:"inline-block", height: "25px", width: "25px", borderRadius: "50%", backgroundColor:"black", marginRight: "20px", marginLeft: "20px"}}><span></span></div>
   )
 }
 
