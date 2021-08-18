@@ -16,7 +16,11 @@ class Board extends React.Component {
     super(props);
   }
 
+  componentDidMount () {
+  }
+
   render() {
+    console.log(this.props.state.value)
   return (
       <div>
       <div style={{display:"flex", justifyContent:"center"}}>

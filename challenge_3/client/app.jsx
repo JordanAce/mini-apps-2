@@ -8,13 +8,19 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      newScore : 0
+      board: [],
+      value: 0
     }
+    this.setScore = this.setScore.bind(this);
   }
 
-  renderBoard (score) {
-    console.log('Score Registered', score)
+  setScore (value) {
+    console.log('SUCCESS', value);
+    this.setState ({
+      value: value
+    })
   }
+
 
   render () {
     return (
@@ -23,11 +29,11 @@ class App extends React.Component {
         <h1 style={{textAlign: "center"}}>LETS BOWL</h1>
       </div>
       <div style={{display:"flex", justifyContent:"space-between"}}>
-      <div style={{marginLeft: "10%"}}><PlayerUI /></div>
+      <div style={{marginLeft: "10%"}}><PlayerUI score = {this.setScore}/></div>
       <div style={{marginRight: "10%"}}><ScoreBoard /></div>
       </div>
       <br></br><br></br>
-      <div><Board /></div>
+      <div><Board state = {this.state}/></div>
       </div>
     )
   }

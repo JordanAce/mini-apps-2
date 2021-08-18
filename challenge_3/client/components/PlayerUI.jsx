@@ -1,4 +1,6 @@
 import React from 'react';
+import App from '../app.jsx';
+import Board from './Board.jsx';
 
 
 class PlayerUI extends React.Component {
@@ -11,14 +13,14 @@ class PlayerUI extends React.Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value);
     this.setState({
       value: event.target.value
     });
   }
 
   handleSubmit(event) {
-    event.preventDefault;
+    event.preventDefault();
+    this.props.score(this.state.value);
   }
 
 
