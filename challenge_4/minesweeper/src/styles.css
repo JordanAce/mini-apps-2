@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url("/Users/jordanacevedo/work/miniapps/rpt27-mini-apps-2/challenge_4/minesweeper/src/windowsBackground.jpg");
+  background-color: rgb(3, 132, 245);
+}
+
+table, th {
+  background-color: #acabab;
+  border-collapse: collapse;
+  border: solid #808080;
+  position: relative;
+  margin: 10px auto;
+  height: 20px;
+  width: 20px;
+
+}
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+  width: 700px;
+  height: 500px;
+}
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 2000px;
+  height: 800px;
+}
