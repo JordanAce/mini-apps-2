@@ -1,6 +1,6 @@
 import React from 'react';
 import Row from './Row'
-import {traverse} from '../helpers';
+import {createBoard} from '../Board.js'
 
 
 class MineSweeperBoard extends React.Component {
@@ -25,38 +25,12 @@ class MineSweeperBoard extends React.Component {
     this.setState({
       board:newBoard
     })
-
-    let matrix = [
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0],
-                 [0,0,0,0,0,0,0,0,0,0]
-    ]
-
-    let bombs = 10;
-
-    while (bombs > 0) {
-      let randomRow = Math.floor(Math.random() * (9 - 0 + 1) + 0);
-      let randomCol = Math.floor(Math.random() * (9 - 0 + 1) + 0);
-      console.log(randomRow, randomCol);
-      if (matrix[randomRow][randomCol] !== 'B') {
-        matrix[randomRow][randomCol] = 'B';
-      bombs--;
-      }
-    }
-
-    // traverse(matrix, adjustSquares);
-    // return matrix;
   }
+
 
   componentDidMount () {
     this.init();
+    createBoard();
   }
 
   render () {
