@@ -23,6 +23,7 @@ class ScoreBoard extends React.Component {
     if (prevProps.frame !== this.props.frame)
     {
       console.log('Props Changed In Scoreboard');
+
       this.updateScoreboard();
     }
 
