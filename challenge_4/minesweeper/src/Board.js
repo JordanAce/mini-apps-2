@@ -1,5 +1,15 @@
-import {traverse} from './helpers';
+import { traverse, checkOtherSquares} from './helpers';
 
+const adjustSquares = (matrix, rowIndex, colIndex) => {
+  let current = matrix[rowIndex][colIndex];
+  const increaseNumber = (condition) => {
+    if (condition) {
+      current++;
+      matrix[rowIndex][colIndex] = current;
+    }
+  }
+  checkOtherSquares(matrix, rowIndex, colIndex, 'B', increaseNumber)
+}
 export const createBoard = () => {
 
   let matrix = [
@@ -29,9 +39,6 @@ export const createBoard = () => {
 
   console.log(matrix);
 
-  // const adjustSquares = (matrix, rowIndex, colIndex) => {
-  //
-  // }
 
   // traverse(matrix, adjustSquares);
   // return matrix;
